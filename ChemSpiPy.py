@@ -112,7 +112,7 @@ def simplesearch(query):
     token  = '3a19d00d-874f-4879-adc0-3013dbecbbc9'
 
     # Construct a search URL and poll Chemspider for the XML result
-    searchurl = baseurl + 'Search.asmx/SimpleSearch?query=' + query + '&token=' + token
+    searchurl = baseurl + 'Search.asmx/SimpleSearch?query=' + urllib.quote(query) + '&token=' + token
 
     response = urllib.urlopen(searchurl)
 
